@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>DOM Traversal</title>
+<title>Game Of Thrones</title>
 <link href="css/meyerReset.css" rel="stylesheet" type="text/css" media="screen">
 <link href="css/GOT_master.css" rel="stylesheet" type="text/css" media="screen">
 <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/solid.js" integrity="sha384-P4tSluxIpPk9wNy8WSD8wJDvA8YZIkC6AQ+BfAFLXcUZIPQGu4Ifv4Kqq+i2XzrM" crossorigin="anonymous"></script>
@@ -14,12 +14,15 @@
 
     <section id="imageContainer">
     	<div id="houseImages"> <!-- add in all of the images to make a scrolling "banner" -->
-    		<img src="images/stark.jpg"/>
-    		<img src="images/baratheon.jpg"/>
-    		<img src="images/lannister.jpg"/>
-    		<img src="images/tully.jpg"/>
-    		<img src="images/greyjoy.jpg"/>
-    		<img src="images/arryn.jpg"/>
+    		<img src="images/stark.jpg" alt="House Stark">
+    		<img src="images/baratheon.jpg" alt="House Baratheon">
+    		<img src="images/lannister.jpg" alt="House Lannister">
+    		<img src="images/tully.jpg" alt="House Tully">
+    		<img src="images/greyjoy.jpg" alt="House Greyjoy">
+    		<img src="images/arryn.jpg" alt="House Arryn">
+        <img src="images/targaryen.jpg" alt="House Targeryen">
+        <img src="images/tyrell.jpg" alt="House Tyrell">
+        <img src="images/martell.jpg" alt="House Martell">
         </div>
     </section>
 
@@ -32,12 +35,17 @@
             <li><div class="sigilContainer tully" data-offset="3"></div></li>
             <li><div class="sigilContainer greyjoy" data-offset="4"></div></li>
             <li><div class="sigilContainer arryn" data-offset="5"></div></li>
+            <li><div class="sigilContainer targaryen" data-offset="6"></div></li>
+            <li><div class="sigilContainer tyrell" data-offset="7"></div></li>
+            <li><div class="sigilContainer martell" data-offset="8"></div></li>
         </ul>
     </nav>
 
-    <h1>clever tagline goes here</h1><!-- replace this with the house name -->
+    <h1>"When you play the game of thrones, you win or you die."</h1>
 
-    <p class="house-info"></p><!-- replace this with house details (github gist for details) -->
+    <p class="house-info">
+
+    </p><!-- replace this with house details (github gist for details) -->
 </main>
 
 <section class="lightbox">
@@ -45,7 +53,16 @@
     <!-- add video here with sources for fallback / standards -->
   <video>
     <source src="video/House-Stark.mp4" type="video/mp4">
+    <source src="video/House-Baratheon.mp4" type="video/mp4">
+    <source src="video/House-Lannister.mp4" type="video/mp4">
+    <source src="video/House-Tully.mp4" type="video/mp4">
+    <source src="video/House-Greyjoy.mp4" type="video/mp4">
+    <source src="video/House-Arryn.mp4" type="video/mp4">
+    <source src="video/House-Targaryen.mp4" type="video/mp4">
+    <source src="video/House-Tyrell.mp4" type="video/mp4">
+    <source src="video/House-Martell.mp4" type="video/mp4">
   </video>
+
   <div class="controls">
     <i class="fas fa-pause-circle"></i>
   </div>

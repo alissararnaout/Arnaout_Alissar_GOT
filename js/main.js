@@ -9,9 +9,13 @@ let sigils = document.querySelectorAll('.sigilContainer'),
     lightbox = document.querySelector('.lightbox'),
     closeLightBoxButton = lightbox.querySelector('.close-lightbox'),
     vidPlayer = document.querySelector('video'),
-    vidControls = document.querySelector('.selector'),
+    vidControls = document.querySelector('.controls'),
     imageBanner = document.querySelector('#houseImages');
 
+function scrollBanners(offset) {
+    let moveIt = offset * 600 + "px";
+      imageBanner.style.right = moveIt;
+}
 
   //functions in the middle!
   function showHouseVideo() {
@@ -19,13 +23,13 @@ let sigils = document.querySelectorAll('.sigilContainer'),
     //split apart the class name on the element, grab the
     document.querySelector('h1').textContent = `House ${houseName}`;
     //debugger;
-    //lightbox.classList.add('show-lightbox');
+    lightbox.classList.add('show-lightbox');
     //make the video play
     vidPlayer.src = `video/House-${houseName}.${vidPlayer.currentSrc.split('.')[1]}`;
     vidPlayer.load();
     vidPlayer.play();
 
-    scrollBanners(this.dataset.offset)
+    scrollBanners(this.dataset.offset);
 
   }
 
@@ -50,10 +54,11 @@ let sigils = document.querySelectorAll('.sigilContainer'),
     let theButton = this.firstElementChild;
 
     if (vidPlayer.paused == true) {
-      //play the
       vidPlayer.play();
       theButton.dataset.icon = "pause-circle";
-    } else {
+
+    }
+    else {
     vidPlayer.pause();
     theButton.dataset.icon = "play-circle";
   }
