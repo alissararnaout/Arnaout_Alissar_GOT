@@ -104,7 +104,7 @@ main {
 .tyrell:hover { background-position:-355px 0px; }
 
 .frey { background-position:-405px -54px; }
-.frey:hover { background-position:-405px 0px; }
+.frey:hover { background-position:-405px 0px; } /*the numbers need to be increasing each time*/
 /* ----- end image sprite ----- */
 
 /* ----- classes for transitions ----- */
