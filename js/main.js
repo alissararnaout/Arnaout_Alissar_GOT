@@ -14,13 +14,16 @@ let sigils = document.querySelectorAll('.sigilContainer'),
 
   //functions in the middle!
   function showHouseVideo() {
+  let houseName = this.className.split(' ')[1].capIt();
+  //split apart the class name on the element, grab the
+  document.querySelector('h1').textContent = `House ${houseName}`;
+      lightbox.classList.add('show-lightbox');
+      //make the video play
+  vidPlayer.src = `video/House-${houseName}.${vidPlayer.currentSrc.split('.')[1]}`;
+  vidPlayer.load();
+  vidPlayer.play();
 
-
-    lightbox.classList.add('show-lightbox');
- //make the video play
-    vidPlayer.src = `video/House-${houseName}.${vidPlayer.currentSrc.split('.')[1]}`;
-    vidPlayer.load();
-    vidPlayer.play();
+  scrollBanners(this.dataset.offset)
 
   }
 
@@ -63,7 +66,7 @@ let sigils = document.querySelectorAll('.sigilContainer'),
 }
 
   //event handing at the bottom
-  sigils.forEach(sigil => sigil.addEventListener('click', scrollBanners));
+  sigils.forEach(sigil => sigil.addEventListener('click', showHouseVideo));
   closeLightBoxButton.addEventListener('click', closeLightBox);
   vidPlayer.addEventListener('ended', closeLightbox);
   vidControls.addEventListener('click', pausePlay);
